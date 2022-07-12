@@ -12,7 +12,7 @@ const userRouter = require('./routes/user');
 
 
 //INIT
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -42,7 +42,7 @@ mongoose.connect(DB).then(() => {
 //     res.json({name: "Prashanta"});
 // });
 //GET, PUT, POST, DELETE, UPDATE -> CRUD
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT,  () => {
     console.log(`connected at port ${PORT}` );
 } )
 //localhost 
